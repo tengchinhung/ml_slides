@@ -1,0 +1,336 @@
+/* 整體投影片 */
+section {
+  font-family:
+    "Aptos Display",
+    "Aptos",
+    Arial,
+    "Times New Roman",
+    "BiauKai",
+    "DFKai-SB",
+    "KaiTi",
+    "標楷體",
+    serif !important;
+  color: #660066 !important;
+  font-size: 32px;
+  line-height: 1.45;
+
+  background-image:
+    /* linear-gradient(rgba(255,255,255,0.65), rgba(255,255,255,0.65)), */
+    url("./assets/YZU5L.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+/* 讓一般文字維持紫色 */
+section p,
+section li,
+section ul,
+section ol {
+  color: #660066 !important;
+}
+
+/* 標題 */
+section h1 {
+  text-align: center;
+  color: #483D8B !important;
+  font-size: 48px !important;
+  font-weight: bold;
+  text-shadow: 3px 3px 4px rgba(0,0,0,0.25);
+  border-bottom: none !important;
+}
+
+/* Marp code block 外層 */
+section pre,
+section marp-pre {
+  background: #FFF59D !important;
+  background-color: #FFF59D !important;
+  padding: 20px !important;
+  border-radius: 4px !important;
+  border: none !important;
+  box-shadow: 5px 5px 10px rgba(0,0,0,0.25) !important;
+  overflow: auto !important;
+}
+
+/* code block 內層 */
+section pre code,
+section pre.hljs,
+section pre code.hljs,
+section marp-pre code,
+section marp-pre code.hljs {
+  background: transparent !important;
+  background-color: transparent !important;
+  color: #000000 !important;
+  font-family: "Consolas", "Courier New", monospace !important;
+  font-size: 22px !important;
+  line-height: 1.3 !important;
+}
+
+/* 語法高亮 span 不要自己上底色 */
+section pre code span,
+section marp-pre code span,
+section .hljs span {
+  background: transparent !important;
+  background-color: transparent !important;
+}
+
+/* 行內 code：只限制在 p、li 裡，避免誤傷 fenced code block */
+section p > code,
+section li > code {
+  background: #FFF59D !important;
+  color: #000000 !important;
+  padding: 2px 6px !important;
+  border-radius: 2px;
+}
+
+section.dark_code pre,
+section.dark_code marp-pre {
+  background: #1e1e1e !important;
+  background-color: #1e1e1e !important;
+  /* border-left: 12px solid #444 !important; */
+}
+
+section.dark_code pre code,
+section.dark_code pre code span,
+section.dark_code marp-pre code,
+section.dark_code marp-pre code span {
+  background: transparent !important;
+  color: #ffffff !important;
+}
+
+/* 黃色便利貼 */
+section .yellow-code pre {
+  background: #FFF59D !important;
+  /* border-left: 12px solid #FDD835 !important; */
+  color: black !important;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 5px 5px 15px rgba(0,0,0,0.2);
+}
+
+section .black-code pre {
+  background: #1e1e1e !important;
+  color: white !important;
+  padding: 18px 28px !important;
+  border-radius: 6px !important;
+  box-shadow: 5px 5px 12px rgba(0,0,0,0.35) !important;
+  border: none !important;
+  border-left: none !important;
+}
+
+section .black-code pre code,
+section .black-code pre code span {
+  background: transparent !important;
+  color: white !important;
+}
+
+section.big_list li {
+  font-size: 36px !important;
+
+  margin-bottom: 20px !important;
+
+  line-height: 1.25 !important;
+}
+
+section.title_up h1 {
+  margin-top: -240px !important;
+}
+
+section.title_up_more h1 {
+  margin-top: -280px !important;
+}
+
+section.small_title h1 {
+  font-size: 40px !important;
+}
+
+section.left_title h1 {
+  text-align: left !important;
+}
+
+section.title-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* 主標題與子標題的整體容器 */
+section.title-slide .title-block {
+  width: 100%;
+  text-align: center;
+  margin-top: -20px;
+}
+
+/* 主標題 */
+section.title-slide .title-block h1 {
+  margin: 0 0 22px 0;
+  font-size: 38px;
+  font-weight: 700;
+  color: #333399;
+}
+
+/* 子標題 */
+section.title-slide .subtitle {
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-size: 32px;
+  font-weight: 600;
+  color: #660066;
+  letter-spacing: 0.04em;
+}
+
+.course-table {
+  width: 100%;
+  border-collapse: collapse;
+  color: #1b2530;
+  font-size: 22px;
+  line-height: 1.45;
+  background: #ffffff;
+}
+
+.course-table th {
+  background: #2f815f;
+  color: #ffffff;
+  font-weight: 700;
+  text-align: left;
+  padding: 20px 34px;
+  border: 1px solid #2f815f;
+}
+
+.course-table td {
+  padding: 22px 34px;
+  border: 1px solid #c7dcd6;
+  vertical-align: middle;
+}
+
+.course-table tbody tr:nth-child(odd) {
+  background: #eef6f3;
+}
+
+.course-table tbody tr:nth-child(even) {
+  background: #ffffff;
+}
+
+.collection-table {
+  width: 86%;
+  margin: 20px auto 0 auto;
+  border-collapse: collapse;
+  table-layout: fixed;
+  font-size: 22px;
+  line-height: 1.25;
+  color: #1b2530;
+}
+
+.collection-table th {
+  background: #2f815f;
+  color: #ffffff;
+  font-weight: 700;
+  text-align: center;
+  padding: 8px 10px;
+  border: 1px solid #c7dcd6;
+}
+
+.collection-table td {
+  padding: 8px 10px;
+  border: 1px solid #c7dcd6;
+  vertical-align: middle;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+}
+
+.collection-table tbody tr:nth-child(odd) {
+  background: #eef6f3;
+}
+
+.collection-table tbody tr:nth-child(even) {
+  background: #ffffff;
+}
+
+section.concept_two_cols {
+  padding: 70px 70px 50px 70px;
+}
+
+section.concept_two_cols .two-col-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 36px;
+  width: 100%;
+}
+
+section.concept_two_cols .col-box {
+  padding: 0 12px;
+}
+
+section.concept_two_cols .col-box h2 {
+  font-size: 32px;
+  color: #660066;
+  margin: 0 0 18px 0;
+}
+
+section.concept_two_cols ul {
+  font-size: 28px;
+  line-height: 1.75;
+  color: #660066;
+  margin: 0;
+  padding-left: 1.4em;
+}
+
+section.concept_two_cols li {
+  margin-bottom: 8px;
+}
+
+section.concept_two_cols .small-text,
+section.concept_two_cols .small-text ul,
+section.concept_two_cols .small-text li {
+  font-size: 24px !important;
+  line-height: 1.5;
+}
+
+.flow-wrap{
+  position:absolute;
+  top:20px;
+  left:20px;
+  width:1240px;
+  display:flex;
+  align-items:center;
+}
+
+.flow-box{
+  width:210px;
+  height:96px;
+  border:1.5px solid #b9c9c2;
+  border-radius:10px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  box-sizing:border-box;
+  text-align:center;
+}
+
+.flow-green{
+  background:#dceee6;
+}
+
+.flow-blue{
+  background:#dce6f5;
+}
+
+.flow-line{
+  width:22px;
+  height:2px;
+  background:#4f7f6f;
+  margin:0 0px;
+}
+
+.flow-title{
+  font-size:22px;
+  line-height:1.2;
+}
+
+.flow-sub{
+  font-size:20px;
+  line-height:1.2;
+  margin-top:4px;
+}
